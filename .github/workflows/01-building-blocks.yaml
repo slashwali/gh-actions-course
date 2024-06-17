@@ -1,10 +1,6 @@
 name: 01 - Building Blocks
 
-on:
-  push:
-    branches: [ $default-branch ]
-  pull_request:
-    branches: [ $default-branch ]
+on:  push
 
 jobs:
   echo-hello:
