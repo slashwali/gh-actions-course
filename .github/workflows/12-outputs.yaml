@@ -40,4 +40,5 @@ jobs:
               run: echo "Deploying"
 
             - name: Print Outputs
-              run: echo "Output1: ${{ needs.build.Outputs.output1 }}"
+              run: |
+                echo "Output1: ${{ needs.build.Outputs.output1 }}"
