@@ -38,7 +38,8 @@ jobs:
       steps:
         - name: Print Variables
           run: |
-            echo "Org overwritten var: ${{ vars.ORG_VAR }}"
+            echo "Org var: ${{ vars.ORG_VAR }}"
+            echo "Org overwritten var: ${{ vars.OVERWRITTEN_VAR }}"
             echo "Org overwritten var: ${{ varS.REPOSITORY_VAR }}"
 
     echo-prod:
