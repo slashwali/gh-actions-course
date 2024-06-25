@@ -13,7 +13,7 @@ jobs:
         runs-on: ubuntu-latest
         defaults:
             run:
-                working-directory: 13-caching/reach-app
+                working-directory: 13-caching/react-app
 
         steps:
             - name: Checkout code
@@ -30,5 +30,6 @@ jobs:
 
             - name: Building
               run: npm run build
+
             - name: Deploying to nonprod
               run: echo "Deploying to nonprod"
