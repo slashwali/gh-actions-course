@@ -48,6 +48,6 @@ jobs:
             uses: actions/download-artifact@v3
             with:
                 name: app
-                path: build
+                path: 14-artifacts/reach-app/build
           - name: Show folder structure
             run: ls -R
