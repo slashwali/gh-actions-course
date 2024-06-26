@@ -32,7 +32,7 @@ jobs:
               run: npm run test
 
             - name: Build code
-              run: npm run Build
+              run: npm run build
 
             - name: Upload build hashFiles
               uses: actions/upload-artifact@v4
