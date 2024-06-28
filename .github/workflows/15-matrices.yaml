@@ -61,12 +61,12 @@ jobs:
                 shape: triangle
               - opacity: 50
               - color: green
-              - shape: circle
-              - size: medium
+                shape: circle
+                size: medium
 
             exclude:
               - color: green
-              - shape: circle
+                shape: circle
               
 
         steps:
