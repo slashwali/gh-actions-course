@@ -12,7 +12,7 @@ jobs:
             - uses: actions/checkout@v4
             
             - name: Show code
-              run: ls -a -R *js-dependency-update*
+              run: ls -a -R
 
             - name: Check for dependency updates
               uses: ./.github/actions/js-dependency-update
