@@ -10,9 +10,6 @@ jobs:
 
         steps:
             - uses: actions/checkout@v4
-            
-            - name: Show code
-              run: ls -a -R
 
             - name: Check for dependency updates
-              uses: /.github/actions/js-dependency-update
+              uses: ./.github/actions/composite-cache-deps
