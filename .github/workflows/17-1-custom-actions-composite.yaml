@@ -4,13 +4,14 @@ on:
     workflow_dispatch: 
 
 env:
-  working-directory: 17-custom-actions/react-app        
+  working-directory: .github/17-custom-actions/react-app        
 jobs:
     build:
         runs-on: ubuntu-latest
         defaults:
           run:
             working-directory: ${{ env.working-directory }}
+
         steps:
             - uses: actions/checkout@v4
 
