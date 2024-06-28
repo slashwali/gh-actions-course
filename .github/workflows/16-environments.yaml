@@ -46,4 +46,4 @@ jobs:
       steps:
         - name: Echo vars
           run: |
-            echo "Deploying to prod backend2"
+               echo "Deploying to prod backend2"
