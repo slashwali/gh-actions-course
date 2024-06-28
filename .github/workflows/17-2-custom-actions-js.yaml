@@ -10,6 +10,9 @@ jobs:
 
         steps:
             - uses: actions/checkout@v4
+            
+            - name: Show code
+              run: echo "ls -l"
 
             - name: Check for dependency updates
               uses: ./.github/actions/js-dependency-update
