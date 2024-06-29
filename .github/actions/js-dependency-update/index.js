@@ -1,8 +1,10 @@
 const core = require('@actions/core')
 const exec = require('@actions/exec')
 
-const validateBranchName = ( { branchName } ) => /^azA-Z0-9_\-\.\/+$/.test(branchName);
-const validateDirectoryName = ( { dirName } ) => /^azA-Z0-9_\-\/+$/.test(dirName);
+const validateBranchName = ( { branchName } ) => 
+    /^[azA-Z0-9_\-\.\/]+$/.test(branchName);
+const validateDirectoryName = ( { dirName } ) => 
+    /^[azA-Z0-9_\-\/]+$/.test(dirName);
 
 async function run() {
     const baseBranch = core.getInput('base-branch');
@@ -14,17 +16,17 @@ async function run() {
     core.setSecret(ghToken);
 
     if (!validateBranchName({ branchName: baseBranch })) {
-        core.setFailed('Invalid base-branch names. Branch names should include only characters, numbers, hyphens, underscores, dots,  and forward slashes.')
+        core.setFailed('Invalid base-branch name. Branch names should include only characters, numbers, hyphens, underscores, dots,  and forward slashes.')
         return;
     }
 
     if (!validateBranchName({ branchName: targetBranch })) {
-        core.setFailed('Invalid target-branch names. Branch names should include only characters, numbers, hyphens, underscores, dots, and forward slashes.')
+        core.setFailed('Invalid target-branch name. Branch names should include only characters, numbers, hyphens, underscores, dots, and forward slashes.')
         return;
     }
 
     if (!validateDirectoryName({ dirName: workingDir })) {
-        core.setFailed('Invalid working directory names. Directory names should include only characters, numbers, hyphens, underscores, and forward slashes.')
+        core.setFailed('Invalid working directory name. Directory names should include only characters, numbers, hyphens, underscores, and forward slashes.')
         return;
     }
 
@@ -46,7 +48,7 @@ async function run() {
         
         core.info('[js-dependency-update] : No updates at this point in time.')
     }
-    
+
     /*
     [DONE]1. Parse Inputs
       1.1 base-branch from which to check for updates
